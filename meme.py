@@ -13,7 +13,7 @@ rank = watcher.league.by_summoner(reg, me['id'])
 print(rank)
 
 
-coi = {'riven': 92, 'camille': 164, 'kaisa': 145}
+coi = {'riven': 92, 'camille': 164, 'kaisa': 145, 'yasuo': 157}
 
 for name, id in coi.items():
     stats = watcher.champion_mastery.by_summoner_by_champion(reg, me['id'], id)
