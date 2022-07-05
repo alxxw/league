@@ -7,10 +7,10 @@ reg = 'na1'
 summoner_name = "Doublelift"
 
 me = watcher.summoner.by_name(reg, summoner_name)
-print(me['summonerLevel'])
+print(f"{summoner_name}'s summoner level is {me['summonerLevel']}")
 
 rank = watcher.league.by_summoner(reg, me['id'])
-print(rank)
+print(f"a {rank[0]['tier'].lower()} {rank[0]['rank']} player with a winrate of {int(rank[0]['wins']) / (int(rank[0]['losses']) + int(rank[0]['wins']))}")
 
 
 coi = {'riven': 92, 'camille': 164, 'kaisa': 145, 'yasuo': 157}
